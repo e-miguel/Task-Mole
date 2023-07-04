@@ -1,8 +1,6 @@
-Certainly! Here's a sample README file for your GitHub repository:
-
 # Project Mole
 
-This repository contains a script for setting up an Apache HTTP server with the Project Mole web application.
+This repository contains a script for setting up an Apache HTTP server with the Project Mole web application from Amazon S3.
 
 ## Prerequisites
 
