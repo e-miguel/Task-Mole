@@ -2,7 +2,6 @@
 
 ![Deploy a wordpress on (10)](https://github.com/e-miguel/Mole-Project-S3/assets/134418850/60935eda-1ce4-4068-bacd-f133d8a69d5e)
 
-
 This repository contains a script for setting up an Apache HTTP server with the Project Mole web application from Amazon S3.
 
 ## Prerequisites
