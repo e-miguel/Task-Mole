@@ -16,6 +16,7 @@ Before running the script, ensure that you have the following:
 ## Reference Architecture
 
 ![Project Mole Reference Architecture](https://github.com/e-miguel/Mole-Project-S3/assets/134418850/9dc446a9-ad4c-4057-84db-6db854513473)
+
 ## Objectives
 
 1. Choose your region
@@ -26,50 +27,41 @@ Before running the script, ensure that you have the following:
 6. Write your script
 7. Add your script and launch your Amazon EC2 instance
 8. Launch your HTML website using your instance's public IPv4 address.
+9. Conclusion and clean up
 
 ## Setup
 
-1. Create security group
-2. Make the script executable by running the following command:
+1. Create security groups with ports 80 and 22 opened.
+2. Create IAM role with S3FullAccess
+3. Create an amazon S3 bucket and attach the role you just created
+4. Download the mole.zip file and upload it on your S3 bucket
+5. Create a script that downloads the web files from the S3 bucket and hosts the HTML website on an EC2 instance. Refer to the sample script provided below.
 
    ```shell
-   chmod +x setup.sh
+   #!/bin/bash
+   sudo su
+   yum update -y
+   yum install -y httpd
+   cd /var/www/html
+   aws s3 sync s3://project-mole /var/www/html
+   unzip mole.zip
+   cp -r /var/www/html/mole-main/* /var/www/html
+   rm -rf mole.zip mole-main
+   systemctl enable httpd
+   systemctl start httpd
    ```
 
-3. Execute the script as root or with sudo privileges:
+6. Launch your EC2 instance and add the script to the user data.
+   -Use Amazon Linux 2 AMI
+   - Use the default VPC
+   - Use the security groups you created
 
-   ```shell
-   sudo ./setup.sh
-   ```
+7. After the script completes successfully, launch the HTML website using the public IPv4 address of your EC2 instance.
+8. You should get the website below. It must show the public IPv4 address of your instance.
 
-   The script performs the following steps:
+![Finished Project Mole](https://github.com/e-miguel/Mole-Project-S3/assets/134418850/fcc78910-b190-48f0-a0c2-f00ece3abd38)
 
-   - Updates the system packages using `yum update -y`.
-   - Installs the Apache HTTP server using `yum install -y httpd`.
-   - Changes the working directory to `/var/www/html`.
-   - Syncs the Project Mole files from the S3 bucket to the local system using `aws s3 sync`.
-   - Extracts the contents of the `mole.zip` archive using `unzip`.
-   - Copies the extracted files to the Apache web server's document root using `cp`.
-   - Cleans up the downloaded files and extracted directory using `rm`.
-   - Enables the Apache service to start on system boot using `systemctl enable httpd`.
-   - Starts the Apache service using `systemctl start httpd`.
 
-4. After the script completes successfully, you should be able to access the Project Mole web application by navigating to `http://<your-server-ip>` in a web browser.
+## Conclusion and Clean Up
 
-## Summary of Scripts
 
-- #!/bin/bash
-- sudo su
-- yum update -y
-- yum install -y httpd
-- cd /var/www/html
-- aws s3 sync s3://project-mole /var/www/html
-- unzip mole.zip
-- cp -r /var/www/html/mole-main/* /var/www/html
-- rm -rf mole.zip mole-main
-- systemctl enable httpd 
-- systemctl start httpd
-
-## Contributing
-
-Contributions to this project are welcome. If you encounter any issues or have suggestions for improvement, please open an issue or submit a pull request.
