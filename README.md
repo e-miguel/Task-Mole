@@ -2,20 +2,34 @@
 
 ![Deploy a wordpress on (10)](https://github.com/e-miguel/Mole-Project-S3/assets/134418850/60935eda-1ce4-4068-bacd-f133d8a69d5e)
 
-This repository contains a script for setting up an Apache HTTP server with the Project Mole web application from Amazon S3.
+In this assignment, challenge your learning in hosting an HTML website on a single EC2 instance in the default VPC.This repository contains a script for setting up an Apache HTTP server with the Project Mole web application from Amazon S3.
 
 ## Prerequisites
 
 Before running the script, ensure that you have the following:
 
-- An Amazon Linux or CentOS system
+- Complete my project here https://medium.com/system-weakness/how-to-host-an-html-website-on-an-ec2-instance-new-console-36560c9ac208
+- AWS and GitHub accounts
 - Root access or sudo privileges on the target system
-- Internet connectivity on the target system
 - AWS CLI configured with appropriate credentials and access to the S3 bucket containing the Project Mole files
 
-## Usage
+## Reference Architecture
 
-1. Clone this repository or download the script to your target system.
+![Project Mole Reference Architecture](https://github.com/e-miguel/Mole-Project-S3/assets/134418850/9dc446a9-ad4c-4057-84db-6db854513473)
+## Objectives
+
+1. Choose your region
+2. Create security groups
+3. Create IAM role
+4. Create an Amazon S3 bucket
+5. Upload the web files to the S3 bucket
+6. Write your script
+7. Add your script and launch your Amazon EC2 instance
+8. Launch your HTML website using your instance's public IPv4 address.
+
+## Setup
+
+1. Create security group
 2. Make the script executable by running the following command:
 
    ```shell
