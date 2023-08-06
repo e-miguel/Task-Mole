@@ -67,3 +67,5 @@ Before running the script, ensure that you have the following:
 This project is a valuable addition to your portfolio. It can help you prepare for your AWS Certified Cloud Practitioner CLF-C01 and AWS Certified Solutions Architect Associate SAA-C03 exams. Let me know if you have any questions. To clean up your resource/s to avoid further cost, terminate your EC2 instance.
 
 Ready to further your professional experience? Sign up here for more constructive real-world projects https://www.aosnote.com/a/2147524876/WLBooyWz
+
+Stay tuned for our next challenge project!
