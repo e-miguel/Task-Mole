@@ -52,7 +52,7 @@ Before running the script, ensure that you have the following:
    ```
 
 6. Launch your EC2 instance and add the script to the user data.
-   -Use Amazon Linux 2 AMI
+   - Use Amazon Linux 2 AMI
    - Use the default VPC
    - Use the security groups you created
 
