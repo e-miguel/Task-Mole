@@ -29,7 +29,7 @@ Before running the script, ensure that you have the following:
 8. Launch your HTML website using your instance's public IPv4 address.
 9. Conclusion and clean up
 
-## Setup
+## Task 1
 
 1. Create security groups with ports 80 and 22 opened.
 2. Create IAM role with S3FullAccess
@@ -61,6 +61,12 @@ Before running the script, ensure that you have the following:
 
 ![Finished Project Mole](https://github.com/e-miguel/Mole-Project-S3/assets/134418850/fcc78910-b190-48f0-a0c2-f00ece3abd38)
 
+## Task 2
+
+1. Download the web files
+2. Upload the web files to a public GitHub repository.
+3. Create a script that downloads the web files from the GitHub repository and hosts the HTML website on an EC2 instance. Refer to the sample script provided above.
+4. Add the script to the EC2 user data at launch to host the HTML website.
 
 ## Conclusion and Clean Up
 
