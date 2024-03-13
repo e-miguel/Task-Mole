@@ -15,7 +15,7 @@ Before running the script, ensure that you have the following:
 
 ## Reference Architecture
 
-![Task 2 - Project X-Men - AOS (1)](https://github.com/e-miguel/Task-Mole/assets/134418850/23cb78c5-dc4a-46f7-8631-a7d0c42ce108)
+![Project Mole](https://github.com/e-miguel/Task-Mole/assets/134418850/42842bb0-0f4e-45ee-b43e-c4d45d7cdaa9)
 
 ## Objectives
 
